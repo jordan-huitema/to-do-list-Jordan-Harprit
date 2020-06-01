@@ -15,8 +15,8 @@ class Todolist{
         this.head = null;
         this.tail = null; 
         this.length = 0;
-
     } 
+    // adds newNode
     add (data){
         var newNode = new Node(data)
         if(!this.head) {
@@ -29,6 +29,7 @@ class Todolist{
         this.length++
         return this;
     }
+    // removes firstnode
     shift() {
         if (!this.head || !this.head.next){
             return undefined;
@@ -38,6 +39,7 @@ class Todolist{
         current = current.next;
         this.head = current;
     }
+    // moves first node to the end
     moveend(){
         if(!this.head && this.head === this.tail)
         {
