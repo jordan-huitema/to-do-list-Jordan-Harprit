@@ -38,8 +38,15 @@ class Todolist{
         current = current.next;
         this.head = current;
     }
+    moveend(){
+        if(!this.head && this.head === this.tail)
+        {
+            return undefined;
+        }
+      this.add(this.head.data)
+      this.shift()
+    }
 }
-
 
 
 let list = new Todolist();
@@ -53,4 +60,6 @@ list.add("lion")
 
 console.log(list);
 list.shift()
+console.log(list);
+list.moveend()
 console.log(list);
