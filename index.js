@@ -29,6 +29,15 @@ class Todolist{
         this.length++
         return this;
     }
+    shift() {
+        if (!this.head || !this.head.next){
+            return undefined;
+        
+        }
+        var current = this.head;
+        current = current.next;
+        this.head = current;
+    }
 }
 
 
@@ -39,4 +48,9 @@ console.log(list);
 list.add("nmit")
 list.add("cow")
 list.add("calf")
+list.add("svpv")
+list.add("lion")
+
+console.log(list);
+list.shift()
 console.log(list);
