@@ -17,6 +17,9 @@ class Todolist{
         this.length = 0;
     } 
     // adds newNode
+    // checks if head contains node 
+    // add newnodes to end of list
+    // sets tails as a lastnode
     add (data){
         var newNode = new Node(data)
         if(!this.head) {
@@ -30,6 +33,11 @@ class Todolist{
         return this;
     }
     // removes firstnode
+    // checks if head contains node || head as next node
+    // clones list
+    // removes the first node
+    // sets secondnode as a head
+    // returns changed list 
     shift() {
         if (!this.head || !this.head.next){
             return undefined;
@@ -40,6 +48,9 @@ class Todolist{
         this.head = current;
     }
     // moves first node to the end
+    //checks if head contains node || if head is tail
+    // adds head to end of list
+    // removes head
     moveend(){
         if(!this.head && this.head === this.tail)
         {
